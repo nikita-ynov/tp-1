@@ -1,10 +1,26 @@
 /* Style global */
+/* colors */
+/* 
+    white - rgb(255, 255, 255);
+    black - rgb(17, 17, 17);
+    blue - rgb(169, 192, 238);
+    gray - rgb(82, 67, 67);
+*/
+:root {
+    --main-bg-color: rgb(17, 17, 17);
+    --main-text-color: rgb(255, 255, 255);
+    --black-color: rgb(17, 17, 17);
+    --white-color: rgb(255, 255, 255);
+    --blue-color: rgb(169, 192, 238);
+    --gray-color: rgb(82, 67, 67);
+}
+
 body {
     font-family: Arial, sans-serif;
     /* Police d'écriture */
-    background: #111;
+    background: var(--main-bg-color);
     /* Couleur du fond */
-    color: rgb(255, 255, 255);
+    color: var(--main-text-color);
     /* Couleur du texte */
     margin: 0;
     /* Espace extérieur */
@@ -19,11 +35,11 @@ body {
 
 /* Couleur du lien */
 a {
-    color: rgb(169, 192, 238);
+    color: var(--blue-color)
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: var(--white-color);
     text-align: center;
 }
 
@@ -34,23 +50,23 @@ p {
 
 img {
     width: 200px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid var(--white-color);;
     /* Taille ; Type ; Couleur de la bordure */
 }
 
 #unique {
-    color: rgb(255, 255, 255);
+    color: var(--white-color);
 }
 
 .exemple {
-    color: rgb(255, 255, 255);
+    color: var(--white-color);;
 }
 
 .box {
-    background: rgb(60, 55, 55);
+    background: var(--black-color);
     padding: 20px;
     /* Espace intérieur */
-    border: 3px solid #34d399;
+    border: 3px solid var(--blue-color);
     margin: 20px;
     /* Espace extérieur */
 }
@@ -72,9 +88,9 @@ img {
 }
 
 .zone {
-    background: rgb(62, 55, 55);
+    background: var(--black-color);
     padding: 10px;
-    border: 1px solid rgb(82, 67, 67);
+    border: 1px solid var(--gray-color);
 }
 
 /* Association des balises aux zones nommées précédemment */
@@ -96,11 +112,11 @@ img {
 
 /* Style global de cette partie */
 .pos {
-    background: #111827;
-    color: #fff;
+    background: var(--black-color);
+    color: var(--white-color);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #374151;
+    border: 1px solid var(--blue-color);
 }
 
 /* Static = par défaut */
@@ -122,7 +138,7 @@ img {
     /* Boite parent */
     position: relative;
     height: 80px;
-    border: 1px dashed rgb(255, 255, 255);
+    border: 1px dashed var(--white-color);
 }
 
 .pos-absolute {
@@ -132,7 +148,7 @@ img {
     /* Placement à 10px du haut */
     right: 10px;
     /* Placement à 10px de la droite */
-    background: rgb(40, 34, 34);
+    background: var(--gray-color);
 }
 
 /* Fixed */
@@ -142,5 +158,5 @@ img {
     /* Placement en bas de l'écran */
     right: 10px;
     /* Placement à droite de l'écran */
-    background: rgb(40, 34, 34);
+    background: var(--gray-color);
 }
