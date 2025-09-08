@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mon premier site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="container">
+        <h1>Bienvenue sur mon site</h1>
+        <nav>
+            <p id="unique">Je suis un paragraphe unique avec un ID.</p>
+            <p class="exemple">Je suis un des paragraphes avec une classe.</p>
+            <p class="exemple">Je suis aussi un des paragraphes avec une classe.</p>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Ceci est un paragraphe avec du <strong>gras</strong> et de <em>l’italique</em>.</p>
+            <p>Un lien vers <a href="https://github.com/nikita-ynov/tp-1">Mon projet GitHub</a></p>
+            <!-- Mettre le lien de votre projet GitHub -->
+            <p>Une image : <img src="/images/exemple.png" alt=""></p> <!-- Mettre le chemin vers votre image -->
+        </section>
+        <div class="box">Une boîte simple</div>
+        <section id="mise-en-page">
+            <h2>Mise en page avec Grid</h2>
+            <div class="grid">
+                <header class="zone">Header</header>
+                <aside class="zone">Sidebar</aside>
+                <main class="zone">Contenu</main>
+                <footer class="zone">Footer</footer>
+            </div>
+        </section>
+        <div class="pos pos-static">Static</div>
+        <div class="pos pos-relative">Relative</div>
+        <div class="wrapper">
+            <div class="pos pos-absolute">Absolute</div>
+        </div>
+        <div class="pos pos-fixed">Fixed</div>
+    </main>
+
+    <footer class="container">
+        <p>Nikita Petrenko - Mon premier site</p>
+    </footer>
+</body>
+
+</html>
