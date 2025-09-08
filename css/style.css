@@ -6,13 +6,20 @@
     blue - rgb(169, 192, 238);
     gray - rgb(82, 67, 67);
 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
-    --main-bg-color: rgb(17, 17, 17);
+    --main-bg-color: rgb(24, 23, 29);
     --main-text-color: rgb(255, 255, 255);
-    --black-color: rgb(17, 17, 17);
+    --black-color: rgb(19, 18, 18);
     --white-color: rgb(255, 255, 255);
-    --blue-color: rgb(169, 192, 238);
-    --gray-color: rgb(82, 67, 67);
+    --blue-color: rgb(121, 163, 249);
+    --gray-color: rgb(78, 74, 74);
+    --default-border-radius: .5rem;
 }
 
 body {
@@ -31,6 +38,39 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
+    padding: 0 10px;
+
+}
+
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    background: var(--gray-color);
+    
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
 }
 
 /* Couleur du lien */
@@ -48,7 +88,7 @@ p {
     /* On ajoute un espace en bas de chaque paragraphe */
 }
 
-img {
+.custImage {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -62,7 +102,8 @@ img {
 }
 
 .exemple {
-    color: var(--white-color);;
+    color: var(--white-color);
+    ;
 }
 
 .box {
@@ -72,14 +113,61 @@ img {
     border: 3px solid var(--blue-color);
     margin: 20px;
     /* Espace extérieur */
+    border-radius: var(--default-border-radius);
 }
+
+.images {
+    border-radius: var(--default-border-radius);
+    overflow: hidden;
+    display: grid;
+    padding: 0;
+    margin: 0;
+    /* Type voulu */
+    grid-template-areas:
+        "first second third fourth";
+
+    /* Espace entre chaque case de la Grid */
+
+}
+
+.images .first {
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+}
+
+.images .second {
+    grid-area: second;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.images .third {
+    grid-area: third;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.images .fourth {
+    grid-area: fourth;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.images img {
+    width: 300px;
+}
+
 
 .grid {
     display: grid;
     /* Type voulu */
     grid-template-columns: 1fr 4fr;
     /* Séparation en 2 colonnes de taille 1fr et 4fr */
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 2fr auto;
     /* Séparation en 3 lignes de taille auto, 1fr et auto */
     grid-template-areas:
         /* Définition des zones */
@@ -87,13 +175,18 @@ img {
         "aside  main"
         "footer footer";
     gap: 10px;
+    background: var(--blue-color);
+    padding: 10px;
+    border-radius: var(--default-border-radius);
     /* Espace entre chaque case de la Grid */
+
 }
 
 .zone {
     background: var(--black-color);
     padding: 10px;
     border: 1px solid var(--gray-color);
+    border-radius: var(--default-border-radius);
 }
 
 /* Association des balises aux zones nommées précédemment */
@@ -113,6 +206,12 @@ img {
     grid-area: footer;
 }
 
+.pos-container {
+    background: var(--gray-color);
+    padding: 10px;
+    border-radius: var(--default-border-radius);
+}
+
 /* Style global de cette partie */
 .pos {
     background: var(--black-color);
@@ -120,6 +219,8 @@ img {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--blue-color);
+    border-radius: var(--default-border-radius);
+
 }
 
 /* Static = par défaut */
@@ -142,6 +243,8 @@ img {
     position: relative;
     height: 80px;
     border: 1px dashed var(--white-color);
+    border-radius: var(--default-border-radius);
+
 }
 
 .pos-absolute {
