@@ -50,7 +50,10 @@ p {
 
 img {
     width: 200px;
-    border: 2px solid var(--white-color);;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid var(--white-color);
+    border-radius: 300px;
     /* Taille ; Type ; Couleur de la bordure */
 }
 
