@@ -1,0 +1,146 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    /* Police d'écriture */
+    background: #111;
+    /* Couleur du fond */
+    color: rgb(255, 255, 255);
+    /* Couleur du texte */
+    margin: 0;
+    /* Espace extérieur */
+    padding: 0;
+    /*Espace intérieur */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Couleur du lien */
+a {
+    color: rgb(169, 192, 238);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1rem;
+    /* On ajoute un espace en bas de chaque paragraphe */
+}
+
+img {
+    width: 200px;
+    border: 2px solid rgb(255, 255, 255);
+    /* Taille ; Type ; Couleur de la bordure */
+}
+
+#unique {
+    color: rgb(255, 255, 255);
+}
+
+.exemple {
+    color: rgb(255, 255, 255);
+}
+
+.box {
+    background: rgb(60, 55, 55);
+    padding: 20px;
+    /* Espace intérieur */
+    border: 3px solid #34d399;
+    margin: 20px;
+    /* Espace extérieur */
+}
+
+.grid {
+    display: grid;
+    /* Type voulu */
+    grid-template-columns: 1fr 4fr;
+    /* Séparation en 2 colonnes de taille 1fr et 4fr */
+    grid-template-rows: auto 1fr auto;
+    /* Séparation en 3 lignes de taille auto, 1fr et auto */
+    grid-template-areas:
+        /* Définition des zones */
+        "header header"
+        "aside  main"
+        "footer footer";
+    gap: 10px;
+    /* Espace entre chaque case de la Grid */
+}
+
+.zone {
+    background: rgb(62, 55, 55);
+    padding: 10px;
+    border: 1px solid rgb(82, 67, 67);
+}
+
+/* Association des balises aux zones nommées précédemment */
+.grid header {
+    grid-area: header;
+}
+
+.grid aside {
+    grid-area: aside;
+}
+
+.grid main {
+    grid-area: main;
+}
+
+.grid footer {
+    grid-area: footer;
+}
+
+/* Style global de cette partie */
+.pos {
+    background: #111827;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #374151;
+}
+
+/* Static = par défaut */
+.pos-static {
+    position: static;
+}
+
+/* Relative */
+.pos-relative {
+    position: relative;
+    top: 5px;
+    /* Déplacement de 5px vers le bas */
+    left: 5px;
+    /* Déplacement de 5px vers la droite */
+}
+
+/* Absolute */
+.wrapper {
+    /* Boite parent */
+    position: relative;
+    height: 80px;
+    border: 1px dashed rgb(255, 255, 255);
+}
+
+.pos-absolute {
+    /* Element concerné */
+    position: absolute;
+    top: 10px;
+    /* Placement à 10px du haut */
+    right: 10px;
+    /* Placement à 10px de la droite */
+    background: rgb(40, 34, 34);
+}
+
+/* Fixed */
+.pos-fixed {
+    position: fixed;
+    bottom: 10px;
+    /* Placement en bas de l'écran */
+    right: 10px;
+    /* Placement à droite de l'écran */
+    background: rgb(40, 34, 34);
+}
